@@ -13,6 +13,10 @@ $ npm install -g balm-cli
 ### Usage
 
 ``` bash
+$ balm list
+```
+
+``` bash
 $ balm init <template-name> <project-name>
 ```
 
