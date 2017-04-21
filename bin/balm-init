@@ -76,7 +76,7 @@ if (exists(to)) {
       ? 'Generate project in current directory?'
       : 'Target directory exists. Continue?',
     name: 'ok'
-  }], function (answers) {
+  }]).then(function (answers) {
     if (answers.ok) {
       run()
     }
