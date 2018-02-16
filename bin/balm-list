@@ -1,42 +1,49 @@
 #!/usr/bin/env node
 
-var logger = require('../lib/logger')
-var request = require('request')
-var chalk = require('chalk')
+const logger = require('../lib/logger');
+const request = require('request');
+const chalk = require('chalk');
 
 /**
  * Padding.
  */
 
-console.log()
-process.on('exit', function () {
-  console.log()
-})
+console.log();
+process.on('exit', function() {
+  console.log();
+});
 
 /**
  * List repos.
  */
 
-request({
-  url: 'https://api.github.com/users/balmjs/repos',
-  headers: {
-    'User-Agent': 'balm-cli'
+request(
+  {
+    url: 'https://api.github.com/users/balmjs/repos',
+    headers: {
+      'User-Agent': 'balm-cli'
+    }
+  },
+  function(err, res, body) {
+    if (err) logger.fatal(err);
+    const requestBody = JSON.parse(body);
+    if (Array.isArray(requestBody)) {
+      console.log('  Available official templates:');
+      console.log();
+      requestBody.filter(repo => {
+        if (/^template-[a-z]{2,}/i.test(repo.name) && repo.description) {
+          console.log(
+            '  ' +
+              chalk.yellow('★') +
+              '  ' +
+              chalk.blue(repo.name.replace('template-', '')) +
+              ' - ' +
+              repo.description
+          );
+        }
+      });
+    } else {
+      console.error(requestBody.message);
+    }
   }
-}, function (err, res, body) {
-  if (err) logger.fatal(err)
-  var requestBody = JSON.parse(body)
-  if (Array.isArray(requestBody)) {
-    console.log('  Available official templates:')
-    console.log()
-    requestBody.filter(function(repo) {
-      if (/^template-[a-z]{1,}/i.test(repo.name)) {
-        console.log(
-          '  ' + chalk.yellow('★') +
-          '  ' + chalk.blue(repo.name.replace('template-', '')) +
-          ' - ' + repo.description)
-      }
-    })
-  } else {
-    console.error(requestBody.message)
-  }
-})
+);

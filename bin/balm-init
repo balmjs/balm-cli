@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 
-var download = require('download-git-repo')
-var program = require('commander')
-var exists = require('fs').existsSync
-var path = require('path')
-var ora = require('ora')
-var home = require('user-home')
-var tildify = require('tildify')
-var chalk = require('chalk')
-var inquirer = require('inquirer')
-var logger = require('../lib/logger')
-var generate = require('../lib/generate')
-var checkVersion = require('../lib/check-version')
+const download = require('download-git-repo');
+const program = require('commander');
+const exists = require('fs').existsSync;
+const path = require('path');
+const ora = require('ora');
+const home = require('user-home');
+const tildify = require('tildify');
+const chalk = require('chalk');
+const inquirer = require('inquirer');
+const rm = require('rimraf').sync;
+const logger = require('../lib/logger');
+const generate = require('../lib/generate');
+const checkVersion = require('../lib/check-version');
 
 /**
  * Usage.
@@ -19,95 +20,109 @@ var checkVersion = require('../lib/check-version')
 
 program
   .usage('<template-name> [project-name]')
-  .option('--offline', 'use cached template')
+  .option('--offline', 'use cached template');
 
 /**
  * Help.
  */
 
-program.on('--help', function () {
-  console.log('  Examples:')
-  console.log()
-  console.log(chalk.gray('    # create a new project with an official template'))
-  console.log('    $ balm init vue my-project')
-  console.log()
-})
+program.on('--help', () => {
+  console.log('  Examples:');
+  console.log();
+  console.log(
+    chalk.gray('    # create a new project with an official template')
+  );
+  console.log('    $ balm init vue my-project');
+  console.log();
+});
 
 /**
  * Help.
  */
 
-function help () {
-  program.parse(process.argv)
-  if (program.args.length < 1) return program.help()
+function help() {
+  program.parse(process.argv);
+  if (program.args.length < 1) return program.help();
 }
-help()
+help();
 
 /**
  * Settings.
  */
 
-var template = program.args[0]
-var rawName = program.args[1]
-var inPlace = !rawName || rawName === '.'
-var name = inPlace ? path.relative('../', process.cwd()) : rawName
-var to = path.resolve(rawName || '.')
-var clone = program.clone || false
+let template = program.args[0];
+const hasSlash = template.indexOf('/') > -1;
+const rawName = program.args[1];
+const inPlace = !rawName || rawName === '.';
+const name = inPlace ? path.relative('../', process.cwd()) : rawName;
+const to = path.resolve(rawName || '.');
+const clone = program.clone || false;
 
-var tmp = path.join(home, '.balm-templates', template.replace(/\//g, '-'))
+const tmp = path.join(home, '.balm-templates', template.replace(/[\/:]/g, '-'));
 if (program.offline) {
-  console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`)
-  template = tmp
+  console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`);
+  template = tmp;
 }
 
 /**
  * Padding.
  */
 
-console.log()
-process.on('exit', function () {
-  console.log()
-})
+console.log();
+process.on('exit', () => {
+  console.log();
+});
 
-if (exists(to)) {
-  inquirer.prompt([{
-    type: 'confirm',
-    message: inPlace
-      ? 'Generate project in current directory?'
-      : 'Target directory exists. Continue?',
-    name: 'ok'
-  }]).then(function (answers) {
-    if (answers.ok) {
-      run()
-    }
-  })
+if (inPlace || exists(to)) {
+  inquirer
+    .prompt([
+      {
+        type: 'confirm',
+        message: inPlace
+          ? 'Generate project in current directory?'
+          : 'Target directory exists. Continue?',
+        name: 'ok'
+      }
+    ])
+    .then(answers => {
+      if (answers.ok) {
+        run();
+      }
+    });
 } else {
-  run()
+  run();
 }
 
 /**
  * Check, download and generate the project.
  */
 
-function run () {
+function run() {
   // check if template is local
   if (/^[./]|(\w:)/.test(template)) {
-    var templatePath = template.charAt(0) === '/' || /^\w:/.test(template)
-      ? template
-      : path.normalize(path.join(process.cwd(), template))
+    var templatePath =
+      template.charAt(0) === '/' || /^\w:/.test(template)
+        ? template
+        : path.normalize(path.join(process.cwd(), template));
     if (exists(templatePath)) {
-      generate(name, templatePath, to, function (err) {
-        if (err) logger.fatal(err)
-        console.log()
-        logger.success('Generated "%s".', name)
-      })
+      generate(name, templatePath, to, function(err) {
+        if (err) logger.fatal(err);
+        console.log();
+        logger.success('Generated "%s".', name);
+      });
     } else {
-      logger.fatal('Local template "%s" not found.', template)
+      logger.fatal('Local template "%s" not found.', template);
     }
   } else {
-    checkVersion(function () {
-      downloadAndGenerate(template)
-    })
+    checkVersion(() => {
+      if (!hasSlash) {
+        // use official templates
+        const officialTemplate = `balmjs/template-${template}`;
+        downloadAndGenerate(officialTemplate);
+      } else {
+        downloadAndGenerate(template);
+      }
+    });
   }
 }
 
@@ -117,16 +132,21 @@ function run () {
  * @param {String} template
  */
 
-function downloadAndGenerate (template) {
-  var spinner = ora('downloading template')
-  spinner.start()
-  download('balmjs/template-' + template, tmp, { clone: clone }, function (err) {
-    spinner.stop()
-    if (err) logger.fatal('Failed to download repo ' + template + ': ' + err.message.trim())
-    generate(name, tmp, to, function (err) {
-      if (err) logger.fatal(err)
-      console.log()
-      logger.success('Generated "%s".', name)
-    })
-  })
+function downloadAndGenerate(template) {
+  const spinner = ora('downloading template');
+  spinner.start();
+  // Remove if local template exists
+  if (exists(tmp)) rm(tmp);
+  download(template, tmp, { clone }, err => {
+    spinner.stop();
+    if (err)
+      logger.fatal(
+        'Failed to download repo ' + template + ': ' + err.message.trim()
+      );
+    generate(name, tmp, to, err => {
+      if (err) logger.fatal(err);
+      console.log();
+      logger.success('Generated "%s".', name);
+    });
+  });
 }
