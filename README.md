@@ -16,7 +16,7 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 $ npm install --global balm-cli
 
 # Verify
-$ balm -v
+$ balm -V
 ```
 
 ### Usage
