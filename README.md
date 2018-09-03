@@ -6,7 +6,7 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
 ### Requirements
 
-1. [Node.js](https://nodejs.org/en/) (>=6.x, LTS preferred), npm version 3+
+1. [Node.js](https://nodejs.org/en/) (>=6.x, 8.x preferred), npm version 3+
 2. [Git](https://git-scm.com/)
 3. BalmJS workflow using [gulp](https://gulpjs.com/) for the build process, so you need run `npm install --global gulp-cli` if it is not already on your machine.
 

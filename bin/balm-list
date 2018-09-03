@@ -9,7 +9,7 @@ const chalk = require('chalk');
  */
 
 console.log();
-process.on('exit', function() {
+process.on('exit', () => {
   console.log();
 });
 
@@ -24,7 +24,7 @@ request(
       'User-Agent': 'balm-cli'
     }
   },
-  function(err, res, body) {
+  (err, res, body) => {
     if (err) logger.fatal(err);
     const requestBody = JSON.parse(body);
     if (Array.isArray(requestBody)) {

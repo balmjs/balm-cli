@@ -5,7 +5,7 @@ module.exports = {
     es6: true
   },
   plugins: ['prettier'],
-  extends: ['prettier'],
+  extends: ['plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': [
       'error',

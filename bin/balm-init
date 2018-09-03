@@ -13,6 +13,10 @@ const rm = require('rimraf').sync;
 const logger = require('../lib/logger');
 const generate = require('../lib/generate');
 const checkVersion = require('../lib/check-version');
+const localPath = require('../lib/local-path');
+
+const isLocalPath = localPath.isLocalPath;
+const getTemplatePath = localPath.getTemplatePath;
 
 /**
  * Usage.
@@ -88,7 +92,8 @@ if (inPlace || exists(to)) {
       if (answers.ok) {
         run();
       }
-    });
+    })
+    .catch(logger.fatal);
 } else {
   run();
 }
@@ -99,13 +104,10 @@ if (inPlace || exists(to)) {
 
 function run() {
   // check if template is local
-  if (/^[./]|(\w:)/.test(template)) {
-    var templatePath =
-      template.charAt(0) === '/' || /^\w:/.test(template)
-        ? template
-        : path.normalize(path.join(process.cwd(), template));
+  if (isLocalPath(template)) {
+    const templatePath = getTemplatePath(template);
     if (exists(templatePath)) {
-      generate(name, templatePath, to, function(err) {
+      generate(name, templatePath, to, err => {
         if (err) logger.fatal(err);
         console.log();
         logger.success('Generated "%s".', name);
@@ -137,16 +139,23 @@ function downloadAndGenerate(template) {
   spinner.start();
   // Remove if local template exists
   if (exists(tmp)) rm(tmp);
-  download(template, tmp, { clone }, err => {
-    spinner.stop();
-    if (err)
-      logger.fatal(
-        'Failed to download repo ' + template + ': ' + err.message.trim()
-      );
-    generate(name, tmp, to, err => {
-      if (err) logger.fatal(err);
-      console.log();
-      logger.success('Generated "%s".', name);
-    });
-  });
+  download(
+    template,
+    tmp,
+    {
+      clone
+    },
+    err => {
+      spinner.stop();
+      if (err)
+        logger.fatal(
+          'Failed to download repo ' + template + ': ' + err.message.trim()
+        );
+      generate(name, tmp, to, err => {
+        if (err) logger.fatal(err);
+        console.log();
+        logger.success('Generated "%s".', name);
+      });
+    }
+  );
 }
