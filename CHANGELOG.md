@@ -1,5 +1,12 @@
 # BalmCLI ChangeLog
 
+## 0.1.3 (2019.01.30)
+
+- **dependencies:** up to date
+- update `balm list` for the color of the frameworks
+
+---
+
 ## 0.1.2 (2018.09.03)
 
 - **dependencies:** up to date

@@ -4,6 +4,28 @@ const logger = require('../lib/logger');
 const request = require('request');
 const chalk = require('chalk');
 
+const COLOR_MAP = {
+  react: 'cyanBright',
+  vue: 'greenBright',
+  ng: 'redBright'
+};
+const POP = Object.keys(COLOR_MAP);
+
+const tagCategory = repoName => {
+  let templateName = repoName.replace('template-', '');
+  let result = chalk.blue(templateName);
+
+  for (let i = 0, len = POP.length; i < len; i++) {
+    let key = POP[i];
+    if (new RegExp(`${key}.*`, 'i').test(templateName)) {
+      result = chalk[COLOR_MAP[key]](key);
+      break;
+    }
+  }
+
+  return result;
+};
+
 /**
  * Padding.
  */
@@ -36,7 +58,7 @@ request(
             '  ' +
               chalk.yellow('★') +
               '  ' +
-              chalk.blue(repo.name.replace('template-', '')) +
+              tagCategory(repo.name) +
               ' - ' +
               repo.description
           );
