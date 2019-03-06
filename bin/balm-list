@@ -18,7 +18,7 @@ const tagCategory = repoName => {
   for (let i = 0, len = POP.length; i < len; i++) {
     let key = POP[i];
     if (new RegExp(`${key}.*`, 'i').test(templateName)) {
-      result = chalk[COLOR_MAP[key]](key);
+      result = chalk[COLOR_MAP[key]](templateName);
       break;
     }
   }

@@ -1,6 +1,14 @@
 # BalmCLI ChangeLog
 
+## 0.1.4 (2019.03.06)
+
+- **`balm list`**: bugfix for template name
+
+---
+
 ## 0.1.3 (2019.01.30)
+
+> Deprecated
 
 - **dependencies:** up to date
 - update `balm list` for the color of the frameworks
