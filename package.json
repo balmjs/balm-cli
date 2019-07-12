@@ -1,10 +1,30 @@
 {
   "name": "balm-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A simple CLI for scaffolding BalmJS projects.",
+  "keywords": [
+    "balm",
+    "cli",
+    "front-end",
+    "development",
+    "dev",
+    "build",
+    "web",
+    "tool",
+    "scaffold",
+    "stack",
+    "generator",
+    "generate",
+    "app",
+    "boilerplate"
+  ],
   "homepage": "https://github.com/balmjs/balm-cli#readme",
   "license": "MIT",
-  "author": "Elf-mousE <ifmouz@gmail.com> (http://elf-mouse.me/)",
+  "author": {
+    "name": "Elf-mousE",
+    "email": "ifmouz@gmail.com",
+    "url": "http://elf-mouse.me/"
+  },
   "bin": {
     "balm": "bin/balm",
     "balm-init": "bin/balm-init",
@@ -18,20 +38,20 @@
     "chalk": "^2.4.2",
     "commander": "^2.20.0",
     "download-git-repo": "^2.0.0",
-    "inquirer": "^6.3.1",
+    "inquirer": "^6.5.0",
     "metalsmith": "^2.3.0",
     "ora": "^3.4.0",
     "request": "^2.88.0",
     "rimraf": "^2.6.3",
-    "semver": "^6.1.1",
+    "semver": "^6.2.0",
     "tildify": "^2.0.0",
     "user-home": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "engines": {
     "node": ">=8"
