@@ -52,8 +52,11 @@ request(
     if (Array.isArray(requestBody)) {
       console.log('  Available official templates:');
       console.log();
-      requestBody.filter(repo => {
-        if (/^template-[a-z]{2,}/i.test(repo.name) && repo.description) {
+      requestBody
+        .filter(
+          repo => /^template-[a-z]{2,}/i.test(repo.name) && repo.description
+        )
+        .forEach(repo => {
           console.log(
             '  ' +
               chalk.yellow('★') +
@@ -62,8 +65,7 @@ request(
               ' - ' +
               repo.description
           );
-        }
-      });
+        });
     } else {
       console.error(requestBody.message);
     }

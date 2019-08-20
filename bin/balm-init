@@ -24,6 +24,7 @@ const getTemplatePath = localPath.getTemplatePath;
 
 program
   .usage('<template-name> [project-name]')
+  .option('-c, --clone', 'use git clone')
   .option('--offline', 'use cached template');
 
 /**
@@ -37,6 +38,11 @@ program.on('--help', () => {
     chalk.gray('    # create a new project with an official template')
   );
   console.log('    $ balm init vue my-project');
+  console.log();
+  console.log(
+    chalk.gray('    # create a new project straight from a github template')
+  );
+  console.log('    $ balm init username/repo my-project');
   console.log();
 });
 
