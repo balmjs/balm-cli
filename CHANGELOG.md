@@ -1,5 +1,11 @@
 # BalmCLI ChangeLog
 
+## 1.1.0 (2019.10.30)
+
+- **deps:** up to date
+
+---
+
 ## 1.0.0 (2019.08.20)
 
 :tada: `balm-cli@1.0.0` released
