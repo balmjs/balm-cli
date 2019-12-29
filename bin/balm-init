@@ -68,6 +68,7 @@ const name = inPlace ? path.relative('../', process.cwd()) : rawName;
 const to = path.resolve(rawName || '.');
 const clone = program.clone || false;
 
+// eslint-disable-next-line no-useless-escape
 const tmp = path.join(home, '.balm-templates', template.replace(/[\/:]/g, '-'));
 if (program.offline) {
   console.log(`> Use cached template at ${chalk.yellow(tildify(tmp))}`);
