@@ -44,8 +44,9 @@ const headers = {
   Accept: 'application/vnd.github.nebula-preview+json'
 };
 
-try {
-  request.get(url, { headers }).then(({ body }) => {
+request
+  .get(url, { headers })
+  .then(({ body }) => {
     const requestBody = body;
     if (Array.isArray(requestBody)) {
       console.log('  Available official templates:');
@@ -67,7 +68,7 @@ try {
     } else {
       console.error(requestBody.message);
     }
+  })
+  .catch(err => {
+    logger.fatal(err);
   });
-} catch (err) {
-  logger.fatal(err);
-}
