@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 
 const logger = require('../lib/logger');
-const request = require('request');
-const chalk = require('chalk');
+const { chalk, request } = require('../lib/utils');
 
 const COLOR_MAP = {
   react: 'cyanBright',
@@ -39,16 +38,15 @@ process.on('exit', () => {
  * List repos.
  */
 
-request(
-  {
-    url: 'https://api.github.com/users/balmjs/repos',
-    headers: {
-      'User-Agent': 'balm-cli'
-    }
-  },
-  (err, res, body) => {
-    if (err) logger.fatal(err);
-    const requestBody = JSON.parse(body);
+const url = 'https://api.github.com/users/balmjs/repos';
+const headers = {
+  'User-Agent': 'balm-cli',
+  Accept: 'application/vnd.github.nebula-preview+json'
+};
+
+try {
+  request.get(url, { headers }).then(({ body }) => {
+    const requestBody = body;
     if (Array.isArray(requestBody)) {
       console.log('  Available official templates:');
       console.log();
@@ -69,5 +67,7 @@ request(
     } else {
       console.error(requestBody.message);
     }
-  }
-);
+  });
+} catch (err) {
+  logger.fatal(err);
+}
