@@ -2,6 +2,10 @@
 
 > :tada: [`balm@2.x`](https://balmjs.com/) released
 
+## 1.4.0 (2020.03.14)
+
+- **deps:** up to date
+
 ## 1.3.0 (2020.03.01)
 
 - **deps:** up to date
