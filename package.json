@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -36,29 +36,29 @@
   },
   "dependencies": {
     "async": "^3.2.0",
-    "chalk": "^3.0.0",
-    "commander": "^5.0.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
     "consolidate": "^0.15.1",
     "download-git-repo": "^3.0.2",
-    "handlebars": "^4.7.3",
+    "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "metalsmith": "^2.3.0",
     "multimatch": "^4.0.0",
-    "ora": "^4.0.3",
+    "ora": "^4.0.4",
     "read-metadata": "^1.0.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.8",
     "rimraf": "^3.0.2",
-    "semver": "^7.1.3",
+    "semver": "^7.3.2",
     "tildify": "^2.0.0",
     "user-home": "^2.0.0",
     "validate-npm-package-name": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1"
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
   },
   "engines": {
     "node": ">=10"
