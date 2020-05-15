@@ -23,7 +23,7 @@
   "author": {
     "name": "Elf-mousE",
     "email": "ifmouz@gmail.com",
-    "url": "http://elf-mouse.me/"
+    "url": "http://elf-mouse.me"
   },
   "bin": {
     "balm": "bin/balm",
