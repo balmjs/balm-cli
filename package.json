@@ -40,6 +40,7 @@
     "commander": "^6.0.0",
     "consolidate": "^0.15.1",
     "download-git-repo": "^3.0.2",
+    "global-dirs": "^2.0.1",
     "handlebars": "^4.7.6",
     "inquirer": "^7.3.2",
     "metalsmith": "^2.3.0",
