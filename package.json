@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "1.6.1",
+  "version": "2.0.0-beta.0",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -26,9 +26,9 @@
     "url": "http://elf-mouse.me"
   },
   "bin": {
-    "balm": "bin/balm",
-    "balm-init": "bin/balm-init",
-    "balm-list": "bin/balm-list"
+    "balm": "bin/balm.js",
+    "balm-init": "bin/balm-init.js",
+    "balm-list": "bin/balm-list.js"
   },
   "repository": {
     "type": "git",
@@ -42,13 +42,13 @@
     "download-git-repo": "^3.0.2",
     "global-dirs": "^2.0.1",
     "handlebars": "^4.7.6",
-    "inquirer": "^7.3.2",
+    "inquirer": "^7.3.3",
     "metalsmith": "^2.3.0",
     "multimatch": "^4.0.0",
     "ora": "^4.0.5",
     "read-metadata": "^1.0.0",
     "request": "^2.88.2",
-    "request-promise-native": "^1.0.8",
+    "request-promise-native": "^1.0.9",
     "rimraf": "^3.0.2",
     "semver": "^7.3.2",
     "tildify": "^2.0.0",

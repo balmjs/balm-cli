@@ -95,7 +95,7 @@ if (inPlace || exists(to)) {
         name: 'ok'
       }
     ])
-    .then(answers => {
+    .then((answers) => {
       if (answers.ok) {
         run();
       }
@@ -114,7 +114,7 @@ function run() {
   if (isLocalPath(template)) {
     const templatePath = getTemplatePath(template);
     if (exists(templatePath)) {
-      generate(name, templatePath, to, err => {
+      generate(name, templatePath, to, (err) => {
         if (err) logger.fatal(err);
         console.log();
         logger.success('Generated "%s".', name);
@@ -152,13 +152,13 @@ function downloadAndGenerate(template) {
     {
       clone
     },
-    err => {
+    (err) => {
       spinner.stop();
       if (err)
         logger.fatal(
           'Failed to download repo ' + template + ': ' + err.message.trim()
         );
-      generate(name, tmp, to, err => {
+      generate(name, tmp, to, (err) => {
         if (err) logger.fatal(err);
         console.log();
         logger.success('Generated "%s".', name);

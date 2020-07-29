@@ -1,0 +1,44 @@
+[
+  {
+    "name": "template-electron",
+    "description": "An Electron app boilerplate based on the BalmJS"
+  },
+  {
+    "name": "template-legacy",
+    "description": "A jQuery project for older browsers"
+  },
+  { "name": "template-ng", "description": "An Angular project" },
+  { "name": "template-pwa", "description": "Progressive Web Apps project" },
+  { "name": "template-react", "description": "A React project" },
+  {
+    "name": "template-react-expert",
+    "description": "A React project with router"
+  },
+  {
+    "name": "template-react-master",
+    "description": "A React project with router & MobX"
+  },
+  { "name": "template-simple", "description": "A simple project" },
+  { "name": "template-vue", "description": "A Vue.js project" },
+  {
+    "name": "template-vue-expert",
+    "description": "A Vue.js project with router (Recommended)"
+  },
+  {
+    "name": "template-vue-master",
+    "description": "A Vue.js project with router & Vuex"
+  },
+  {
+    "name": "template-vue-ssr",
+    "description": "A server-rendered Vue.js project (Experimental)"
+  },
+  {
+    "name": "template-vue-ssr-without-vuex",
+    "description": "A server-rendered Vue.js project without Vuex (Experimental)"
+  },
+  {
+    "name": "template-vue-wechat-mp",
+    "description": "A Vue.js project for WeChat Mini Program"
+  },
+  { "name": "template-wechat", "description": null }
+]

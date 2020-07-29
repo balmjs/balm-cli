@@ -2,6 +2,7 @@
 
 const logger = require('../lib/logger');
 const { chalk, request } = require('../lib/utils');
+const localRepos = require('../lib/repos.json');
 
 const COLOR_MAP = {
   react: 'cyanBright',
@@ -10,7 +11,7 @@ const COLOR_MAP = {
 };
 const POP = Object.keys(COLOR_MAP);
 
-const tagCategory = repoName => {
+const tagCategory = (repoName) => {
   let templateName = repoName.replace('template-', '');
   let result = chalk.blue(templateName);
 
@@ -53,9 +54,9 @@ request
       console.log();
       requestBody
         .filter(
-          repo => /^template-[a-z]{2,}/i.test(repo.name) && repo.description
+          (repo) => /^template-[a-z]{2,}/i.test(repo.name) && repo.description
         )
-        .forEach(repo => {
+        .forEach((repo) => {
           console.log(
             '  ' +
               chalk.yellow('★') +
@@ -69,6 +70,17 @@ request
       console.error(requestBody.message);
     }
   })
-  .catch(err => {
+  .catch((err) => {
     logger.fatal(err);
+
+    localRepos.forEach((repo) => {
+      console.log(
+        '  ' +
+          chalk.yellow('★') +
+          '  ' +
+          tagCategory(repo.name) +
+          ' - ' +
+          repo.description
+      );
+    });
   });
