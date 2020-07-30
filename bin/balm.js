@@ -3,9 +3,9 @@
 const path = require('path');
 const fs = require('fs');
 
-const balmModuleBin = path.join(__dirname, '..', '..', 'balm', 'bin');
+const balmModuleBin = path.join(process.cwd(), 'node_modules', 'balm', 'bin');
 const balmCliBin = fs.existsSync(balmModuleBin)
-  ? `${balmModule}/balm-go.js`
+  ? `${balmModuleBin}/balm.js`
   : './balm-global.js';
 
 require(balmCliBin);
