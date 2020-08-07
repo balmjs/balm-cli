@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -39,24 +39,22 @@
     "chalk": "^4.1.0",
     "commander": "^6.0.0",
     "consolidate": "^0.15.1",
-    "download-git-repo": "^3.0.2",
+    "download": "^8.0.0",
     "global-dirs": "^2.0.1",
     "handlebars": "^4.7.6",
     "inquirer": "^7.3.3",
     "metalsmith": "^2.3.0",
     "multimatch": "^4.0.0",
-    "ora": "^4.0.5",
-    "read-metadata": "^1.0.0",
+    "ora": "^4.1.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
     "rimraf": "^3.0.2",
     "semver": "^7.3.2",
-    "tildify": "^2.0.0",
-    "user-home": "^2.0.0",
-    "validate-npm-package-name": "^3.0.0"
+    "validate-npm-package-name": "^3.0.0",
+    "yaml-js": "^0.2.3"
   },
   "devDependencies": {
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "prettier": "^2.0.5"

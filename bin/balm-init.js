@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-const download = require('download-git-repo');
 const program = require('commander');
-const exists = require('fs').existsSync;
+const { existsSync } = require('fs');
 const path = require('path');
 const ora = require('ora');
-const home = require('user-home');
-const tildify = require('tildify');
+const home = require('os').homedir();
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const rm = require('rimraf').sync;
+const tildify = require('../lib/tildify');
+const download = require('../lib/git/download');
 const logger = require('../lib/logger');
 const generate = require('../lib/generate');
 const checkVersion = require('../lib/check-version');
@@ -84,7 +84,7 @@ process.on('exit', () => {
   console.log();
 });
 
-if (inPlace || exists(to)) {
+if (inPlace || existsSync(to)) {
   inquirer
     .prompt([
       {
@@ -113,7 +113,7 @@ function run() {
   // check if template is local
   if (isLocalPath(template)) {
     const templatePath = getTemplatePath(template);
-    if (exists(templatePath)) {
+    if (existsSync(templatePath)) {
       generate(name, templatePath, to, (err) => {
         if (err) logger.fatal(err);
         console.log();
@@ -145,7 +145,7 @@ function downloadAndGenerate(template) {
   const spinner = ora('downloading template');
   spinner.start();
   // Remove if local template exists
-  if (exists(tmp)) rm(tmp);
+  if (existsSync(tmp)) rm(tmp);
   download(
     template,
     tmp,

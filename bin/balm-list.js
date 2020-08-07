@@ -71,7 +71,7 @@ request
     }
   })
   .catch((err) => {
-    logger.fatal(err);
+    // logger.fatal(err);
 
     localRepos.forEach((repo) => {
       console.log(
