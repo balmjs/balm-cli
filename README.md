@@ -2,26 +2,19 @@
 
 A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
-## Installation
-
-### Requirements
+## Requirements
 
 1. [Node.js](https://nodejs.org/en/) >=10.x, npm version 5+
 2. [Git](https://git-scm.com/)
-3. BalmJS workflow using [gulp](https://gulpjs.com/) for the build process, so you need install `gulp-cli` globally.
+3. [BalmJS workflow](https://balm.js.org/) >= 3.x
 
 ```sh
-yarn global add gulp-cli
+yarn global add balm-core
 # OR
-npm install -g gulp-cli
-
-# Verify
-gulp -v
-# Output:
-# CLI version: 2.2.0
+npm install -g balm-core
 ```
 
-### Installing **`balm-cli`**
+## Installation
 
 Then install the `balm-cli` globally.
 
@@ -33,10 +26,11 @@ npm install -g balm-cli
 # Verify
 balm -V
 # Output:
-# 1.5.0
+# balm-cli: 2.0.0
+# balm-core: 3.0.0
 ```
 
-### Usage
+## Usage
 
 ```sh
 # See all available official templates
@@ -51,7 +45,11 @@ Example:
 
 ```sh
 balm init vue my-project
+# OR
+balm init vue#next my-project
+```
 
+```sh
 # Custom templates
 balm init username/repo my-project
 ```
