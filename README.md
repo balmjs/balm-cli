@@ -6,7 +6,9 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
 1. [Node.js](https://nodejs.org/en/) >=10.x, npm version 5+
 2. [Git](https://git-scm.com/)
-3. [BalmJS workflow](https://balm.js.org/) >= 3.x
+3. [BalmJS](https://balm.js.org/) core >= 3.x
+
+First install the `balm-core` globally.
 
 ```sh
 yarn global add balm-core
