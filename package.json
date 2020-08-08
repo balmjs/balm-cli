@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.0",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -45,7 +45,7 @@
     "inquirer": "^7.3.3",
     "metalsmith": "^2.3.0",
     "multimatch": "^4.0.0",
-    "ora": "^4.1.0",
+    "ora": "^5.0.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
     "rimraf": "^3.0.2",
