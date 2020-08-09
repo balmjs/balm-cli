@@ -1,6 +1,6 @@
 # BalmCLI ChangeLog
 
-## 2.0.0 (2020.08.08)
+## 2.0.0 (2020.08.09)
 
 :tada: [`balm@3`](https://balm.js.org/) is coming up!
 
