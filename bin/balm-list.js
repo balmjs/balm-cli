@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-const logger = require('../lib/logger');
 const { chalk, request } = require('../lib/utils');
 const localRepos = require('../lib/repos.json');
 
@@ -70,9 +69,7 @@ request
       console.error(requestBody.message);
     }
   })
-  .catch((err) => {
-    // logger.fatal(err);
-
+  .catch(() => {
     localRepos.forEach((repo) => {
       console.log(
         '  ' +
