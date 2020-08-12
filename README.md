@@ -46,13 +46,12 @@ balm init <template-name> <project-name>
 Example:
 
 ```sh
+# Official template
 balm init vue my-project
-# OR
-balm init vue#next my-project
 ```
 
 ```sh
-# Custom templates
+# Custom template
 balm init username/repo my-project
 ```
 
