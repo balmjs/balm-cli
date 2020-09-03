@@ -2,7 +2,7 @@
 
 :tada: [`balm 3.0`](https://balm.js.org/) released
 
-## 2.1.0 (2020.09.03)
+## 2.2.0 (2020.09.03)
 
 ### Features
 
