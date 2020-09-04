@@ -1,7 +1,7 @@
 [
   {
     "name": "template-electron",
-    "description": "An Electron app boilerplate based on the BalmJS"
+    "description": "An Electron project for desktop apps"
   },
   {
     "name": "template-legacy",
