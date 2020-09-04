@@ -2,6 +2,12 @@
 
 :tada: [`balm 3.0`](https://balm.js.org/) released
 
+## 2.2.0 (2020.09.04)
+
+### Features
+
+- add `balm go` command
+
 ## 2.1.2 (2020.09.04)
 
 ### Features

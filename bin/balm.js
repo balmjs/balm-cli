@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const balmModuleBin = require('../lib/balm-env');
+const pkg = require('../package');
+const balmPkg = require('../lib/balm-core');
+const program = require('commander');
 
-const balmCliBin = fs.existsSync(balmModuleBin)
-  ? `${balmModuleBin}/balm.js`
-  : './balm-global.js';
+const version = `balm-cli: ${pkg.version}\nbalm-core: ${balmPkg.version}`;
 
-require(balmCliBin);
+program
+  .version(version)
+  .usage('<command> [options]')
+  .command('go', 'run a project')
+  .command('init', 'generate a new project from a template')
+  .command('list', 'list available official templates');
+
+program.parse(process.argv);

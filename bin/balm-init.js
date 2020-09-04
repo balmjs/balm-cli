@@ -38,8 +38,6 @@ program.on('--help', () => {
     chalk.gray('    # create a new project with an official template')
   );
   console.log('    $ balm init vue my-project');
-  console.log(chalk.gray('    # OR'));
-  console.log('    $ balm init vue#next my-project');
   console.log();
   console.log(
     chalk.gray('    # create a new project straight from a github template')
