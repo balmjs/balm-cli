@@ -11,13 +11,7 @@ if (fs.existsSync(balmEnvFile)) {
 }
 
 const balmCwd = process.env.BALM || process.cwd();
-const balmModule = path.join(
-  balmCwd,
-  'node_modules',
-  'balm',
-  'bin',
-  'balm-go.js'
-);
+const balmModule = path.join(balmCwd, 'node_modules', 'balm', 'bin', 'balm.js');
 
 if (fs.existsSync(balmModule)) {
   require(balmModule);
