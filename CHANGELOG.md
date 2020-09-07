@@ -2,6 +2,12 @@
 
 :tada: [`balm 3.0`](https://balm.js.org/) released
 
+## 2.2.2 (2020.09.07)
+
+### Bug Fixes
+
+- bugfix for detect local `balm-core`
+
 ## 2.2.1 (2020.09.04)
 
 ### Features
