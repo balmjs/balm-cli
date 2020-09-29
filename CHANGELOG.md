@@ -1,6 +1,11 @@
 # BalmCLI ChangeLog
 
-:tada: [`balm 3.0`](https://balm.js.org/) released
+:tada: [`BalmJS 3.0`](https://balm.js.org/) released
+
+## 2.3.0 (2020.09.29)
+
+- chore: update deps
+  - `consolidate`: 0.15 -> 0.16
 
 ## 2.2.2 (2020.09.07)
 
