@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 2.4.1 (2020.11.30)
+
+### Bug Fixes
+
+- fix global packages directory for outdated Windows
+
 ## 2.4.0 (2020.10.21)
 
 ### Chore
