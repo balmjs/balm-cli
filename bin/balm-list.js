@@ -38,10 +38,11 @@ process.on('exit', () => {
  * List repos.
  */
 
-const url = 'https://api.github.com/users/balmjs/repos';
+const url =
+  'https://api.github.com/orgs/balmjs/repos?sort=full_name&per_page=50';
 const headers = {
   'User-Agent': 'balm-cli',
-  Accept: 'application/vnd.github.nebula-preview+json'
+  Accept: 'application/vnd.github.v3+json'
 };
 
 request

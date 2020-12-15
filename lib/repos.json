@@ -1,23 +1,4 @@
 [
-  {
-    "name": "template-electron",
-    "description": "An Electron project for desktop apps"
-  },
-  {
-    "name": "template-legacy",
-    "description": "A jQuery project for older browsers"
-  },
-  { "name": "template-ng", "description": "An Angular project" },
-  { "name": "template-pwa", "description": "Progressive Web Apps project" },
-  { "name": "template-react", "description": "A React project" },
-  {
-    "name": "template-react-expert",
-    "description": "A React project with router"
-  },
-  {
-    "name": "template-react-master",
-    "description": "A React project with router & MobX"
-  },
   { "name": "template-simple", "description": "A simple project" },
   { "name": "template-vue", "description": "A Vue.js project" },
   {
@@ -40,5 +21,23 @@
     "name": "template-vue-wechat-mp",
     "description": "A Vue.js project for WeChat Mini Program"
   },
-  { "name": "template-wechat", "description": null }
+  { "name": "template-react", "description": "A React project" },
+  {
+    "name": "template-react-expert",
+    "description": "A React project with router"
+  },
+  {
+    "name": "template-react-master",
+    "description": "A React project with router & MobX"
+  },
+  { "name": "template-ng", "description": "An Angular project" },
+  { "name": "template-pwa", "description": "Progressive Web Apps project" },
+  {
+    "name": "template-electron",
+    "description": "An Electron project for desktop apps"
+  },
+  {
+    "name": "template-legacy",
+    "description": "A jQuery project for older browsers"
+  }
 ]
