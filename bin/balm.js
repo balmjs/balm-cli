@@ -2,7 +2,7 @@
 
 const pkg = require('../package');
 const balmPkg = require('../lib/balm-core');
-const program = require('commander');
+const { program } = require('commander');
 
 const version = `balm-cli: ${pkg.version}\nbalm-core: ${balmPkg.version} (${
   balmPkg.isLocal ? 'Local' : 'Global'

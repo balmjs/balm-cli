@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const program = require('commander');
+const { program } = require('commander');
 const { existsSync } = require('fs');
 const path = require('path');
 const ora = require('ora');

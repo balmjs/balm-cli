@@ -2,6 +2,16 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 2.5.0 (2021.02.28)
+
+### Chore
+
+- add `svelte` template
+- update deps
+  - `commander`: 6.x -> 7.x
+  - `global-dirs`: 2.x -> 3.x
+  - `inquirer`: 7.x -> 8.x
+
 ## 2.4.2 (2020.12.15)
 
 ### Bug Fixes

@@ -19,7 +19,7 @@
   },
   {
     "name": "template-vue-wechat-mp",
-    "description": "A Vue.js project for WeChat Mini Program"
+    "description": "BalmJS 脚手架 - 使用 Vue 同构微信小程序和 Web"
   },
   { "name": "template-react", "description": "A React project" },
   {
@@ -39,5 +39,9 @@
   {
     "name": "template-legacy",
     "description": "A jQuery project for older browsers"
+  },
+  {
+    "name": "template-svelte",
+    "description": "A Svelte project"
   }
 ]
