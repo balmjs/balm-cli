@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 2.5.1 (2021.04.06)
+
+### Bug Fixes
+
+- fix init bug for some registry
+
 ## 2.5.0 (2021.02.28)
 
 ### Chore
