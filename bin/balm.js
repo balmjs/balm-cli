@@ -1,8 +1,12 @@
 #!/usr/bin/env node
+import { createRequire } from 'node:module';
+import { Command } from 'commander';
+import balmPkg from '../lib/balm-core.js';
 
-const pkg = require('../package');
-const balmPkg = require('../lib/balm-core');
-const { program } = require('commander');
+const requireModule = createRequire(import.meta.url);
+
+const program = new Command();
+const pkg = requireModule('../package.json');
 
 const version = `balm-cli: ${pkg.version}\nbalm-core: ${balmPkg.version} (${
   balmPkg.isLocal ? 'Local' : 'Global'

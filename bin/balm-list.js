@@ -1,7 +1,10 @@
 #!/usr/bin/env node
+import { createRequire } from 'node:module';
+import { chalk, request } from '../lib/utils/index.js';
 
-const { chalk, request } = require('../lib/utils');
-const localRepos = require('../lib/repos.json');
+const requireModule = createRequire(import.meta.url);
+
+const localRepos = requireModule('../lib/repos.json');
 
 const COLOR_MAP = {
   react: 'cyanBright',

@@ -1,22 +1,23 @@
 #!/usr/bin/env node
+import path from 'node:path';
+import { existsSync } from 'node:fs';
+import os from 'node:os';
+import { Command } from 'commander';
+import ora from 'ora';
+import chalk from 'chalk';
+import inquirer from 'inquirer';
+import rimraf from 'rimraf';
+import tildify from '../lib/tildify.js';
+import download from '../lib/git/download.js';
+import logger from '../lib/logger.js';
+import generate from '../lib/generate.js';
+import checkVersion from '../lib/check-version.js';
+import localPath from '../lib/local-path.js';
 
-const { program } = require('commander');
-const { existsSync } = require('fs');
-const path = require('path');
-const ora = require('ora');
-const home = require('os').homedir();
-const chalk = require('chalk');
-const inquirer = require('inquirer');
-const rm = require('rimraf').sync;
-const tildify = require('../lib/tildify');
-const download = require('../lib/git/download');
-const logger = require('../lib/logger');
-const generate = require('../lib/generate');
-const checkVersion = require('../lib/check-version');
-const localPath = require('../lib/local-path');
-
-const isLocalPath = localPath.isLocalPath;
-const getTemplatePath = localPath.getTemplatePath;
+const home = os.homedir();
+const program = new Command();
+const rm = rimraf.sync;
+const { isLocalPath, getTemplatePath } = localPath;
 
 /**
  * Usage.
