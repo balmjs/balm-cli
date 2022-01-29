@@ -2,6 +2,13 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 3.0.0 (2022.01.29)
+
+### BREAKING CHANGES
+
+- Require Node.js 12.20
+- This package is now pure ESM
+
 ## 2.5.1 (2021.04.06)
 
 ### Bug Fixes
