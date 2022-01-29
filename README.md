@@ -4,7 +4,7 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/) >= 10.13.0, npm version 5.2.0+
+1. [Node.js](https://nodejs.org/) >= 12.20, npm version 5.2.0+
 2. [Git](https://git-scm.com/)
 3. [BalmJS](https://balm.js.org/) core >= 3.x
 
@@ -21,14 +21,14 @@ npm install -g balm-core
 Then install the `balm-cli` globally.
 
 ```sh
-yarn global add balm-cli
+yarn global add balm-cli@next
 # OR
-npm install -g balm-cli
+npm install -g balm-cli@next
 
 # Verify
 balm -V
 # Output:
-# balm-cli: 2.0.0
+# balm-cli: 3.0.0
 # balm-core: 3.0.0 (Global)
 ```
 
@@ -77,5 +77,5 @@ balm init username/repo my-project
   - [electron](https://github.com/balmjs/template-electron) - An Electron app boilerplate based on the BalmJS
   - [legacy](https://github.com/balmjs/template-legacy) - A jQuery project for older browsers
 
-[balm-cli-image]: https://badge.fury.io/js/balm-cli.svg
-[balm-cli-url]: https://npmjs.org/package/balm-cli
+[balm-cli-image]: https://img.shields.io/npm/v/balm-cli/next
+[balm-cli-url]: https://www.npmjs.com/package/balm-cli
