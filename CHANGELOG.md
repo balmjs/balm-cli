@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 3.0.1 (2022.02.11)
+
+### Bug Fixes
+
+- fix `balm-core` version bug
+
 ## 3.0.0 (2022.01.29)
 
 ### BREAKING CHANGES
