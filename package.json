@@ -45,7 +45,7 @@
     "global-dirs": "^3.0.0",
     "handlebars": "^4.7.7",
     "inquirer": "^8.2.0",
-    "metalsmith": "^2.3.0",
+    "metalsmith": "^2.4.1",
     "multimatch": "^6.0.0",
     "ora": "^6.0.1",
     "request": "^2.88.2",
