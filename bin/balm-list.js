@@ -3,7 +3,6 @@ import { createRequire } from 'node:module';
 import { chalk, request } from '../lib/utils/index.js';
 
 const requireModule = createRequire(import.meta.url);
-
 const localRepos = requireModule('../lib/repos.json');
 
 const COLOR_MAP = {
@@ -13,7 +12,7 @@ const COLOR_MAP = {
 };
 const POP = Object.keys(COLOR_MAP);
 
-const tagCategory = (repoName) => {
+function tagCategory(repoName) {
   let templateName = repoName.replace('template-', '');
   let result = chalk.blue(templateName);
 
@@ -26,7 +25,7 @@ const tagCategory = (repoName) => {
   }
 
   return result;
-};
+}
 
 /**
  * Padding.
@@ -48,40 +47,28 @@ const headers = {
   Accept: 'application/vnd.github.v3+json'
 };
 
+const isValidTemplate = ({ name, description }) =>
+  /^template-[a-z]{2,}/i.test(name) &&
+  description &&
+  !/Coming soon/i.test(description);
+
+function showRepositories(repos) {
+  repos.forEach(({ name, description }) =>
+    console.log(
+      '  ' + chalk.yellow('★') + '  ' + tagCategory(name) + ' - ' + description
+    )
+  );
+}
+
 request
   .get(url, { headers })
-  .then(({ body }) => {
-    const requestBody = body;
-    if (Array.isArray(requestBody)) {
+  .then((responseData) => {
+    if (Array.isArray(responseData)) {
+      const remoteRepos = responseData.filter((repo) => isValidTemplate(repo));
+
       console.log('  Available official templates:');
       console.log();
-      requestBody
-        .filter(
-          (repo) => /^template-[a-z]{2,}/i.test(repo.name) && repo.description
-        )
-        .forEach((repo) => {
-          console.log(
-            '  ' +
-              chalk.yellow('★') +
-              '  ' +
-              tagCategory(repo.name) +
-              ' - ' +
-              repo.description
-          );
-        });
-    } else {
-      console.error(requestBody.message);
+      showRepositories(remoteRepos);
     }
   })
-  .catch(() => {
-    localRepos.forEach((repo) => {
-      console.log(
-        '  ' +
-          chalk.yellow('★') +
-          '  ' +
-          tagCategory(repo.name) +
-          ' - ' +
-          repo.description
-      );
-    });
-  });
+  .catch((e) => showRepositories(localRepos));

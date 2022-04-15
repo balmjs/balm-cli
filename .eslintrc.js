@@ -5,5 +5,5 @@ module.exports = {
     es6: true
   },
   plugins: ['prettier'],
-  extends: ['eslint:recommended', 'plugin:prettier/recommended']
+  extends: ['plugin:prettier/recommended']
 };

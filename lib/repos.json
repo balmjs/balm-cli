@@ -1,13 +1,23 @@
 [
-  { "name": "template-simple", "description": "A simple project" },
-  { "name": "template-vue", "description": "A Vue.js project" },
+  {
+    "name": "template-simple",
+    "description": "A simple project"
+  },
+  {
+    "name": "template-vue",
+    "description": "A Vue.js project"
+  },
   {
     "name": "template-vue-expert",
-    "description": "A Vue.js project with router (Recommended)"
+    "description": "A Vue.js project with router"
   },
   {
     "name": "template-vue-master",
-    "description": "A Vue.js project with router & Vuex"
+    "description": "A Vue.js project with router & store"
+  },
+  {
+    "name": "template-vue-ui",
+    "description": "A Vue.js project with router & BalmUI (Recommended)"
   },
   {
     "name": "template-vue-ssr",
@@ -21,20 +31,33 @@
     "name": "template-vue-wechat-mp",
     "description": "BalmJS 脚手架 - 使用 Vue 同构微信小程序和 Web"
   },
-  { "name": "template-react", "description": "A React project" },
+  {
+    "name": "template-react",
+    "description": "A React project"
+  },
   {
     "name": "template-react-expert",
     "description": "A React project with router"
   },
   {
     "name": "template-react-master",
-    "description": "A React project with router & MobX"
+    "description": "A React project with router & store"
   },
-  { "name": "template-ng", "description": "An Angular project" },
-  { "name": "template-pwa", "description": "Progressive Web Apps project" },
+  {
+    "name": "template-ng",
+    "description": "An Angular project"
+  },
+  {
+    "name": "template-pwa",
+    "description": "Progressive Web Apps project"
+  },
   {
     "name": "template-electron",
-    "description": "An Electron project for desktop apps"
+    "description": "An Electron project (desktop apps)"
+  },
+  {
+    "name": "template-tauri",
+    "description": "A Tauri project (desktop apps)"
   },
   {
     "name": "template-legacy",
@@ -43,5 +66,9 @@
   {
     "name": "template-svelte",
     "description": "A Svelte project"
+  },
+  {
+    "name": "template-solid",
+    "description": "A Solid project"
   }
 ]

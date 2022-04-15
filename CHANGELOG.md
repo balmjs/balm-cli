@@ -2,6 +2,14 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 3.1.0 (2022.04.15)
+
+### Chore
+
+- update deps
+  - `validate-npm-package-name`: 3.x -> 4.x
+  - remove `request` and use `node-fetch` instead
+
 ## 3.0.1 (2022.02.11)
 
 ### Bug Fixes
