@@ -2,6 +2,13 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 3.2.0 (2022.09.20)
+
+### Chore
+
+- update deps
+  - `inquirer`: 8.x -> 9.x
+
 ## 3.1.0 (2022.04.15)
 
 ### Chore
