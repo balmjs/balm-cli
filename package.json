@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -44,7 +44,7 @@
     "download": "^8.0.0",
     "global-dirs": "^3.0.0",
     "handlebars": "^4.7.7",
-    "inquirer": "^9.1.2",
+    "inquirer": "^8.2.4",
     "metalsmith": "^2.5.0",
     "multimatch": "^6.0.0",
     "node-fetch": "^3.2.10",
