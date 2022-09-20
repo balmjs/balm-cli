@@ -2,7 +2,7 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
-## 3.2.1 (2022.09.20)
+## 3.2.2 (2022.09.20)
 
 ### Chore
 

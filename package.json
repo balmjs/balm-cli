@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "3.2.1",
+  "version": "3.2.2",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
