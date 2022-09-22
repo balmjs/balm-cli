@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 3.3.1 (2022.09.22)
+
+### Bug Fixes
+
+- fix getMetadata bug
+
 ## 3.3.0 (2022.09.20)
 
 ### Chore
