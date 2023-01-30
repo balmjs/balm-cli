@@ -2,6 +2,19 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.0.0 (2023.01.30)
+
+### Chore
+
+- update deps
+  - `commander`: 9.x -> 10.x
+  - `rimraf`: 3.x -> 4.x
+  - `validate-npm-package-name`: 4.x -> 5.x
+
+### BREAKING CHANGES
+
+- Require Node.js ^14.17.0 || ^16.13.0 || >=18.0.0
+
 ## 3.3.1 (2022.09.22)
 
 ### Bug Fixes
