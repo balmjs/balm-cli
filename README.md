@@ -4,16 +4,16 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/) >= 12.20, npm version 5.2.0+
+1. [Node.js](https://nodejs.org/) >= 14.18.0
 2. [Git](https://git-scm.com/)
 3. [BalmJS](https://balm.js.org/) `balm-core` >= 3
 
 First install the `balm-core` globally.
 
 ```sh
-yarn global add balm-core
-# OR
 npm install -g balm-core
+# OR
+yarn global add balm-core
 ```
 
 ## Installation
@@ -21,15 +21,15 @@ npm install -g balm-core
 Then install the `balm-cli` globally.
 
 ```sh
-yarn global add balm-cli
-# OR
 npm install -g balm-cli
+# OR
+yarn global add balm-cli
 
 # Verify
 balm -V
 # Output:
-# balm-cli: 3.0.0
-# balm-core: 3.0.0 (Global)
+# balm-cli: 4.0.0
+# balm-core: 4.0.0 (Global)
 ```
 
 ## Usage
