@@ -17,6 +17,10 @@
   },
   {
     "name": "template-vue-ui",
+    "description": "A Vue.js project with router & BalmUI"
+  },
+  {
+    "name": "template-vite",
     "description": "A Vue.js project with router & BalmUI (Recommended)"
   },
   {

@@ -63,7 +63,8 @@ balm init username/repo my-project
   - [vue](https://github.com/balmjs/template-vue) - A Vue.js project
   - [vue-expert](https://github.com/balmjs/template-vue-expert) - A Vue.js project with router
   - [vue-master](https://github.com/balmjs/template-vue-master) - A Vue.js project with router & store
-  - [vue-ui](https://github.com/balmjs/template-vue-ui) - A Vue.js project with router & BalmUI (Recommended)
+  - [vue-ui](https://github.com/balmjs/template-vue-ui) - A Vue.js project with router & BalmUI
+  - [vite](https://github.com/balmjs/template-vite) - A Vue.js project with Vite & BalmUI (Recommended)
   - [vue-ssr](https://github.com/balmjs/template-vue-ssr) - A server-rendered Vue.js project (Experimental)
   - [vue-ssr-without-vuex](https://github.com/balmjs/template-vue-ssr-without-vuex) - A server-rendered Vue.js project without Vuex (Experimental)
   - [vue-wechat-mp](https://github.com/balmjs/template-vue-wechat-mp) - 使用 Vue 同构微信小程序和 Web

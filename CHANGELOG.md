@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.1.0 (2023.03.16)
+
+### Features
+
+- update vite template repository
+
 ## 4.0.0 (2023.01.30)
 
 ### Chore

@@ -8,6 +8,7 @@ const localRepos = requireModule('../lib/repos.json');
 const COLOR_MAP = {
   react: 'cyanBright',
   vue: 'greenBright',
+  vite: 'greenBright',
   ng: 'redBright'
 };
 const POP = Object.keys(COLOR_MAP);
