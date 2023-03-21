@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm publish
+npm publish --tag legacy
