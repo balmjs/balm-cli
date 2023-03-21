@@ -32,6 +32,8 @@ balm -V
 # balm-core: 4.0.0 (Global)
 ```
 
+> ⚠️ NOTE: For Windows users, use `balm-cli@legacy`
+
 ## Usage
 
 ```sh
