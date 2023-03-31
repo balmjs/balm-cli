@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.2.0 (2023.03.31)
+
+### Features
+
+- Windows compatible
+
 ## 4.1.0 (2023.03.16)
 
 ### Features
