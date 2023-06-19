@@ -2,6 +2,19 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.3.0 (2023.06.19)
+
+### Chore
+
+- update deps
+  - `commander`: 10.x -> 11.x
+  - `consolidate`: 0.x -> 1.x
+  - `rimraf`: 4.x -> 5.x
+
+### BREAKING CHANGES
+
+- minimum supported Node.js version is `16`
+
 ## 4.2.0 (2023.03.31)
 
 ### Features
