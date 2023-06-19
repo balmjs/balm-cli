@@ -6,7 +6,7 @@ import { Command } from 'commander';
 import ora from 'ora';
 import chalk from 'chalk';
 import inquirer from 'inquirer';
-import rimraf from 'rimraf';
+import { rimrafSync } from 'rimraf';
 import tildify from '../lib/tildify.js';
 import download from '../lib/git/download.js';
 import logger from '../lib/logger.js';
@@ -16,7 +16,7 @@ import localPath from '../lib/local-path.js';
 
 const home = os.homedir();
 const program = new Command();
-const rm = rimraf.sync;
+const rm = rimrafSync;
 const { isLocalPath, getTemplatePath } = localPath;
 
 /**
