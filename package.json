@@ -1,6 +1,6 @@
 {
   "name": "balm-cli",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "description": "A simple CLI for scaffolding BalmJS projects.",
   "keywords": [
     "balm",
@@ -36,29 +36,30 @@
     "url": "git+https://github.com/balmjs/balm-cli.git"
   },
   "dependencies": {
-    "async": "^3.2.0",
-    "chalk": "^4.1.0",
-    "commander": "^7.2.0",
+    "async": "^3",
+    "chalk": "^4",
+    "commander": "^7",
     "consolidate": "^0.16.0",
     "download": "^8.0.0",
-    "global-dirs": "^3.0.0",
-    "handlebars": "^4.7.7",
-    "inquirer": "^8.0.0",
-    "metalsmith": "^2.3.0",
-    "multimatch": "^5.0.0",
-    "ora": "^5.4.0",
+    "global-dirs": "^3",
+    "handlebars": "^4",
+    "inquirer": "^7",
+    "metalsmith": "^2",
+    "minimatch": "^7",
+    "multimatch": "^5",
+    "ora": "^5",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.9",
-    "rimraf": "^3.0.2",
-    "semver": "^7.3.5",
-    "validate-npm-package-name": "^3.0.0",
-    "yaml-js": "^0.2.3"
+    "rimraf": "^3",
+    "semver": "^7",
+    "validate-npm-package-name": "^3",
+    "yaml-js": "^0.3.1"
   },
   "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint": "^7",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-prettier": "^3",
+    "prettier": "^2"
   },
   "engines": {
     "node": ">=10.13.0"
