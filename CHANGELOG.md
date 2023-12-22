@@ -2,6 +2,15 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.4.0 (2023.12.22)
+
+### Chore
+
+- update deps
+  - `global-dirs`: 3.x -> 4.x
+  - `multimatch`: 6.x -> 7.x
+  - `ora`: 6.x -> 7.x
+
 ## 4.3.0 (2023.06.19)
 
 ### Chore
