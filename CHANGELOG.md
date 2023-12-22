@@ -11,6 +11,10 @@
   - `multimatch`: 6.x -> 7.x
   - `ora`: 6.x -> 7.x
 
+### BREAKING CHANGES
+
+- minimum supported Node.js version is `18`
+
 ## 4.3.0 (2023.06.19)
 
 ### Chore
