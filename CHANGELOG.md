@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.5.0 (2024.02.04)
+
+- update deps
+  - `commander`: 11.x -> 12.x
+  - `ora`: 7.x -> 8.x
+
 ## 4.4.0 (2023.12.22)
 
 ### Chore
