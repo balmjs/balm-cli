@@ -4,7 +4,9 @@ A simple CLI for scaffolding [BalmJS](https://github.com/balmjs/balm) projects.
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/) >= 14.18.0
+> ⚠️ NOTE: `balm-cli` >= 4.4.0 requires Node >= 18, `balm-cli` = 4.3.0 requires Node >= 16, `balm-cli` <= 4.2.0 requires Node >= 14.17.0
+
+1. [Node.js](https://nodejs.org/)
 2. [Git](https://git-scm.com/)
 3. [BalmJS](https://balm.js.org/) `balm-core` >= 3
 
