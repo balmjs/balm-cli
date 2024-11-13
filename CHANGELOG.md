@@ -2,6 +2,12 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.6.0 (2024.11.13)
+
+- update deps
+  - `inquirer`: 9.x -> 12.x
+  - `validate-npm-package-name`: 5.x -> 6.x
+
 ## 4.5.0 (2024.02.04)
 
 - update deps
