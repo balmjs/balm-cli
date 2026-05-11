@@ -20,6 +20,14 @@
     "description": "A Vue.js project with router & BalmUI"
   },
   {
+    "name": "template-vue-ui-front",
+    "description": "A Vue.js project with shared project for front-end"
+  },
+  {
+    "name": "template-vue-ui-back",
+    "description": "A Vue.js project with shared project for back-end"
+  },
+  {
     "name": "template-vite",
     "description": "A Vue.js project with router & BalmUI (Recommended)"
   },
