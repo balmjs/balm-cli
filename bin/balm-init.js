@@ -25,6 +25,8 @@ const { isLocalPath, getTemplatePath } = localPath;
 
 program
   .usage('<template-name> [project-name]')
+  .argument('<template-name>')
+  .argument('[project-name]')
   .option('-c, --clone', 'use git clone')
   .option('--offline', 'use cached template');
 
