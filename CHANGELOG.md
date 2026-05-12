@@ -2,6 +2,23 @@
 
 :tada: [`BalmJS 3.0`](https://balm.js.org/) released
 
+## 4.7.0 (2026.05.11)
+
+### Chore
+
+- update deps
+  - `global-directory`: 4.x -> 5.x
+  - `inquirer`: 12.x -> 13.x
+  - `minimatch`: 9.x -> 10.x
+  - `multimatch`: 7.x -> 8.x
+  - `ora`: 8.x -> 9.x
+  - `rimraf`: 5.x -> 6.x
+  - `validate-npm-package-name`: 6.x -> 7.x
+
+### BREAKING CHANGES
+
+- minimum supported Node.js version is `20`
+
 ## 4.6.0 (2024.11.13)
 
 - update deps
