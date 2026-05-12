@@ -68,6 +68,8 @@ balm init username/repo my-project
   - [vue-expert](https://github.com/balmjs/template-vue-expert) - A Vue.js project with router
   - [vue-master](https://github.com/balmjs/template-vue-master) - A Vue.js project with router & store
   - [vue-ui](https://github.com/balmjs/template-vue-ui) - A Vue.js project with router & BalmUI
+  - [vue-ui-front](https://github.com/balmjs/template-vue-ui-front) - A Vue.js project with shared project for front-end
+  - [vue-ui-back](https://github.com/balmjs/template-vue-ui-back) - A Vue.js project with shared project for back-end
   - [vite](https://github.com/balmjs/template-vite) - A Vue.js project with Vite & BalmUI (Recommended)
   - [vue-ssr](https://github.com/balmjs/template-vue-ssr) - A server-rendered Vue.js project (Experimental)
   - [vue-ssr-without-vuex](https://github.com/balmjs/template-vue-ssr-without-vuex) - A server-rendered Vue.js project without Vuex (Experimental)
